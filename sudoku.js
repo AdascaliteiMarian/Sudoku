@@ -104,6 +104,6 @@ function clickCell(cell){
     }
 }
 
-function functie() {
+function InputNumber() {
    inputNumber =  $('#inputNumber').val();
 }
