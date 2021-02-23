@@ -25,7 +25,7 @@ BODY {
   grid: initial;
 }
   #grid TR TD.hidden {
-   opacity: 0;
+   opacity: 0.5;
   }
 
   .container {
