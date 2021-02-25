@@ -37,10 +37,10 @@ function generateFirstRow(){
             }
         }
     }
-    permutari()
+    permutations()
 }
 function checkPreviousNumbers(i, j, number){
-   copyNumber = number;
+    copyNumber = number;
     var flag = 0;
     var saveI = j;
     for( j = j-1; j >= 0; --j){
@@ -58,7 +58,7 @@ function checkPreviousNumbers(i, j, number){
     }
 }
 
-function permutari(){
+function permutations(){
     for(i = 0; i <= gridlimit; ++i){
         FirstArrayNumbers.push(grid.rows[rowCounter].cells[i].innerHTML)
     }
@@ -97,10 +97,10 @@ function hideNumbers(){
 
 function clickCell(cell){
     if(cell.innerHTML == inputnumber){
-    cell.className = "";
-    cell.innerHTML = inputnumber;
+        cell.className = "";
+        cell.innerHTML = inputnumber;
     } else {
-    alert("U lost");
+        alert("U lost");
     }
     checkGameCompletion();
 }
