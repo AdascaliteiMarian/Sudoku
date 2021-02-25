@@ -4,7 +4,7 @@ var FirstArrayNumbers = new Array;
 var gridlimit = 8;
 var rowCounter = 0;
 var shiftArray = 3;
-var inputNumber;
+var inputnumber;
 createGrid();
 function createGrid(){
     var yes = 1;
@@ -87,7 +87,7 @@ function shiftNumbers() {
 }
 
 function hideNumbers(){
-    for(var g = 0; g < 100; ++g){
+    for(var g = 0; g < 50; ++g){
         var row = Math.floor(Math.random() * 9);
         var col = Math.floor(Math.random() * 9);
         var cell4 = grid.rows[row].cells[col];
@@ -96,14 +96,32 @@ function hideNumbers(){
 }
 
 function clickCell(cell){
-    if(cell.innerHTML == inputNumber){
+    if(cell.innerHTML == inputnumber){
     cell.className = "";
-    cell.innerHTML = inputNumber;
+    cell.innerHTML = inputnumber;
     } else {
     alert("U lost");
     }
+    checkGameCompletion();
 }
 
-function InputNumber() {
-   inputNumber =  $('#inputNumber').val();
+function inputNumber() {
+   inputnumber =  $('#inputNumber').val();
+}
+
+function checkGameCompletion(){
+    var won = true;
+    var once = 0;
+    for (var i = 0; i < 9; i++) {
+        for(var j = 0; j < 9; j++) {
+            var Cell  = grid.rows[i].cells[j];
+            if(Cell.className == "hidden"){
+                won  = false;
+            }
+        }
+    }
+    if(won == true && once == 0){
+        ++once;
+        alert("U won")
+    }
 }
