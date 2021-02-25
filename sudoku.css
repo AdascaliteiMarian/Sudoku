@@ -21,16 +21,13 @@ BODY {
   h1 {
     background-color: black;
   }
-#grid{
-  grid: initial;
-}
   #grid TR TD.hidden {
-   opacity: 0.5;
+   color:black;
+   background-color: black;
   }
 
   .container {
     display: inline-grid;
-    
     background-color: #3e2723;
     padding: 10px;
     border-radius: 10px;
